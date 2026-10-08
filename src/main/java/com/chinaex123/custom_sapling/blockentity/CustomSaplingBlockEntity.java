@@ -1,6 +1,5 @@
 package com.chinaex123.custom_sapling.blockentity;
 
-import com.chinaex123.custom_sapling.CustomSapling;
 import com.chinaex123.custom_sapling.definition.CustomSaplingDefinition;
 import com.chinaex123.custom_sapling.init.CSBlockEntities;
 import com.chinaex123.custom_sapling.data.recipes.CustomSaplingManager;
