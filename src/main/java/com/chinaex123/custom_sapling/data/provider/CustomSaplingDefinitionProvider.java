@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -42,12 +43,24 @@ public class CustomSaplingDefinitionProvider implements DataProvider {
         definitions.put("cobblestone", CustomSaplingDefinitionBuilder.builder()
                 .tintColor("#B3B3B3")
                 .trunkBlock(Blocks.COBBLESTONE)
-                .leavesBlock(Blocks.STONE)
-                .trunkHeightUniform(3, 6)
+                .leavesBlock(Blocks.GRANITE)
+                .trunkHeightUniform(3, 8)
                 .foliageRadius(2)
                 .trunkPlacer(new StraightTrunkPlacer(3, 3, 0))
                 .foliagePlacer(new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2))
                 .validGround(Blocks.COBBLESTONE)
+                .build());
+
+        // 黑曜石树苗
+        definitions.put("obsidian", CustomSaplingDefinitionBuilder.builder()
+                .tintColor("#5E0C6F")
+                .trunkBlock(Blocks.OBSIDIAN)
+                .leavesBlock(Blocks.MAGMA_BLOCK)
+                .trunkHeightUniform(3, 8)
+                .foliageRadius(2)
+                .trunkPlacer(new StraightTrunkPlacer(3, 3, 0))
+                .foliagePlacer(new SpruceFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(2)))
+                .validGround(Blocks.OBSIDIAN)
                 .build());
 
     }

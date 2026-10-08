@@ -1,14 +1,14 @@
 {
   "foliage_placer": {
-    "type": "minecraft:blob_foliage_placer",
-    "height": 2,
+    "type": "minecraft:spruce_foliage_placer",
     "offset": 0,
-    "radius": 2
+    "radius": 2,
+    "trunk_height": 2
   },
   "foliage_radius": 2,
-  "leaves_block": "minecraft:granite",
-  "sapling_tint_color": "#B3B3B3",
-  "trunk_block": "minecraft:cobblestone",
+  "leaves_block": "minecraft:magma_block",
+  "sapling_tint_color": "#5E0C6F",
+  "trunk_block": "minecraft:obsidian",
   "trunk_height": {
     "type": "minecraft:uniform",
     "max_inclusive": 8,
@@ -21,6 +21,6 @@
     "height_rand_b": 0
   },
   "valid_ground_blocks": [
-    "minecraft:cobblestone"
+    "minecraft:obsidian"
   ]
 }

@@ -52,8 +52,6 @@ public class CustomSaplingBlock extends SaplingBlock implements EntityBlock {
         return new CustomSaplingBlockEntity(pos, state);
     }
 
-
-
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState below = level.getBlockState(pos.below());

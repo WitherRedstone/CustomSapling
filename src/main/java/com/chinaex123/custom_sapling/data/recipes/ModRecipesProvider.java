@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -20,12 +21,21 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
-        // 圆石树苗：圆石围一圈 + 橡木树苗
+        // 圆石树苗
         CustomSaplingRecipeBuilder.builder()
                 .setSaplingId("cobblestone")
                 .pattern("BBB", "BAB", "BBB")
-                .define('A', Items.OAK_SAPLING)
+                .defineTag('A', ItemTags.SAPLINGS)
                 .define('B', Items.COBBLESTONE)
+                .setResult(CSItems.CUSTOM_SAPLING.get())
+                .save(recipeOutput);
+
+        // 黑曜石树苗
+        CustomSaplingRecipeBuilder.builder()
+                .setSaplingId("obsidian")
+                .pattern("BBB", "BAB", "BBB")
+                .defineTag('A', ItemTags.SAPLINGS)
+                .define('B', Items.OBSIDIAN)
                 .setResult(CSItems.CUSTOM_SAPLING.get())
                 .save(recipeOutput);
 

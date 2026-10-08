@@ -5,6 +5,9 @@ import com.chinaex123.custom_sapling.crafting.recipe.CustomSaplingRecipe;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -65,6 +68,11 @@ public class CustomSaplingRecipeBuilder {
 
     public CustomSaplingRecipeBuilder define(char c, ResourceLocation itemId) {
         this.key.put(String.valueOf(c), Ingredient.of(BuiltInRegistries.ITEM.get(itemId)));
+        return this;
+    }
+
+    public CustomSaplingRecipeBuilder defineTag(char c, TagKey<Item> tag) {
+        this.key.put(String.valueOf(c), Ingredient.of(tag));
         return this;
     }
 
