@@ -1,5 +1,6 @@
 package com.chinaex123.custom_sapling.blockentity;
 
+import com.chinaex123.custom_sapling.CustomSapling;
 import com.chinaex123.custom_sapling.definition.CustomSaplingDefinition;
 import com.chinaex123.custom_sapling.init.CSBlockEntities;
 import com.chinaex123.custom_sapling.data.recipes.CustomSaplingManager;
@@ -13,7 +14,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class CustomSaplingBlockEntity extends BlockEntity {
 
-    private static final String TAG_SAPLING_ID = "sapling_id";
+    /** 和 CustomSaplingItem / CustomSaplingBlock 保持一致 */
+    private static final String TAG_SAPLING_ID = "CustomSaplingId";
 
     private ResourceLocation saplingId;
 
@@ -49,6 +51,16 @@ public class CustomSaplingBlockEntity extends BlockEntity {
         if (tag.contains(TAG_SAPLING_ID)) {
             saplingId = ResourceLocation.tryParse(tag.getString(TAG_SAPLING_ID));
         }
+    }
+
+    /** 确保 getUpdateTag() 也保存 saplingId（客户端同步 / 初次加载都用这个） */
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = super.getUpdateTag(registries);
+        if (saplingId != null) {
+            tag.putString(TAG_SAPLING_ID, saplingId.toString());
+        }
+        return tag;
     }
 
     @Override
