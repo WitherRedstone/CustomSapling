@@ -3,5 +3,7 @@
 
   "block.custom_sapling.custom_sapling": "自定义树苗",
   "block.custom_sapling.cobblestone": "圆石树苗",
-  "block.custom_sapling.obsidian": "黑曜石树苗"
+  "block.custom_sapling.obsidian": "黑曜石树苗",
+  "block.custom_sapling.iron_ore": "铁矿石树苗",
+  "block.custom_sapling.coal_ore": "煤矿石树苗"
 }

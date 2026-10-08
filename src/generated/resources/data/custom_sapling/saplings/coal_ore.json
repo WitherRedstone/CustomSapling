@@ -1,0 +1,26 @@
+{
+  "foliage_placer": {
+    "type": "minecraft:jungle_foliage_placer",
+    "height": 2,
+    "offset": 0,
+    "radius": 2
+  },
+  "foliage_radius": 2,
+  "leaves_block": "minecraft:stone",
+  "sapling_tint_color": "#494B3F",
+  "trunk_block": "minecraft:coal_ore",
+  "trunk_height": {
+    "type": "minecraft:uniform",
+    "max_inclusive": 12,
+    "min_inclusive": 5
+  },
+  "trunk_placer": {
+    "type": "minecraft:giant_trunk_placer",
+    "base_height": 4,
+    "height_rand_a": 4,
+    "height_rand_b": 0
+  },
+  "valid_ground_blocks": [
+    "minecraft:coal_ore"
+  ]
+}

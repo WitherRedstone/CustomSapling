@@ -39,5 +39,23 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .setResult(CSItems.CUSTOM_SAPLING.get())
                 .save(recipeOutput);
 
+        // 铁矿石树苗
+        CustomSaplingRecipeBuilder.builder()
+                .setSaplingId("iron_ore")
+                .pattern("BBB", "BAB", "BBB")
+                .defineTag('A', ItemTags.SAPLINGS)
+                .define('B', Items.IRON_ORE)
+                .setResult(CSItems.CUSTOM_SAPLING.get())
+                .save(recipeOutput);
+
+        // 煤矿石树苗
+        CustomSaplingRecipeBuilder.builder()
+                .setSaplingId("coal_ore")
+                .pattern("BBB", "BAB", "BBB")
+                .defineTag('A', ItemTags.SAPLINGS)
+                .define('B', Items.COAL_BLOCK)
+                .setResult(CSItems.CUSTOM_SAPLING.get())
+                .save(recipeOutput);
+
     }
 }

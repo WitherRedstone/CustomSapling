@@ -38,7 +38,6 @@ data/<你的命名空间>/saplings/<树苗名>.json
 - `base_height`：树干基础高度，通常填和 `trunk_height.min_inclusive` 一样的值
 - `height_rand_a`：额外随机高度 A，通常填 `trunk_height.max_inclusive - trunk_height.min_inclusive`
 - `height_rand_b`：额外随机高度 B，一般填 0 即可
-树干最终高度 = base_height + 随机(0 到 height_rand_a) + 随机(0 到 height_rand_b)
 
 **`minecraft:forking_trunk_placer`** —— 分叉树干（深色橡木用的）
 - `base_height`、`height_rand_a`、`height_rand_b` 含义同上

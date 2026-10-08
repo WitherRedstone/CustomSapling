@@ -11,7 +11,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.PineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -59,8 +63,32 @@ public class CustomSaplingDefinitionProvider implements DataProvider {
                 .trunkHeightUniform(3, 8)
                 .foliageRadius(2)
                 .trunkPlacer(new StraightTrunkPlacer(3, 3, 0))
-                .foliagePlacer(new SpruceFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(2)))
+                .foliagePlacer(new PineFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(2)))
                 .validGround(Blocks.OBSIDIAN)
+                .build());
+
+        // 铁矿石树苗
+        definitions.put("iron_ore", CustomSaplingDefinitionBuilder.builder()
+                .tintColor("#D8AF93")
+                .trunkBlock(Blocks.IRON_ORE)
+                .leavesBlock(Blocks.STONE)
+                .trunkHeightUniform(3, 8)
+                .foliageRadius(2)
+                .trunkPlacer(new ForkingTrunkPlacer(3, 3, 0))
+                .foliagePlacer(new SpruceFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(4)))
+                .validGround(Blocks.IRON_ORE)
+                .build());
+
+        // 煤矿石树苗
+        definitions.put("coal_ore", CustomSaplingDefinitionBuilder.builder()
+                .tintColor("#494B3F")
+                .trunkBlock(Blocks.COAL_ORE)
+                .leavesBlock(Blocks.STONE)
+                .trunkHeightUniform(5, 12)
+                .foliageRadius(2)
+                .trunkPlacer(new GiantTrunkPlacer(4, 4, 0))
+                .foliagePlacer(new MegaJungleFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2))
+                .validGround(Blocks.COAL_ORE)
                 .build());
 
     }

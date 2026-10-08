@@ -1,26 +1,26 @@
 {
   "foliage_placer": {
-    "type": "minecraft:pine_foliage_placer",
-    "height": 2,
+    "type": "minecraft:spruce_foliage_placer",
     "offset": 0,
-    "radius": 2
+    "radius": 2,
+    "trunk_height": 4
   },
   "foliage_radius": 2,
-  "leaves_block": "minecraft:magma_block",
-  "sapling_tint_color": "#5E0C6F",
-  "trunk_block": "minecraft:obsidian",
+  "leaves_block": "minecraft:stone",
+  "sapling_tint_color": "#D8AF93",
+  "trunk_block": "minecraft:iron_ore",
   "trunk_height": {
     "type": "minecraft:uniform",
     "max_inclusive": 8,
     "min_inclusive": 3
   },
   "trunk_placer": {
-    "type": "minecraft:straight_trunk_placer",
+    "type": "minecraft:forking_trunk_placer",
     "base_height": 3,
     "height_rand_a": 3,
     "height_rand_b": 0
   },
   "valid_ground_blocks": [
-    "minecraft:obsidian"
+    "minecraft:iron_ore"
   ]
 }

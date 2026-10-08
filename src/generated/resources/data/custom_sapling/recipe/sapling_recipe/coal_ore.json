@@ -1,0 +1,26 @@
+{
+  "type": "custom_sapling:sapling_recipe",
+  "key": {
+    "A": {
+      "tag": "minecraft:saplings"
+    },
+    "B": {
+      "item": "minecraft:coal_block"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "CustomSaplingId": "custom_sapling:coal_ore"
+      }
+    },
+    "count": 1,
+    "id": "custom_sapling:custom_sapling"
+  },
+  "sapling_id": "custom_sapling:coal_ore"
+}
