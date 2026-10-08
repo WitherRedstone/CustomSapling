@@ -16,11 +16,13 @@ import net.neoforged.neoforge.registries.RegisterEvent;
 @EventBusSubscriber
 public class CSRecipes {
 
+    public static final CustomSaplingRecipeSerializer SERIALIZER = new CustomSaplingRecipeSerializer();
+
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
             DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, CustomSapling.MODID);
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<?>> SAPLING_SERIALIZER =
-            RECIPE_SERIALIZERS.register("sapling_recipe", CustomSaplingRecipeSerializer::new);
+            RECIPE_SERIALIZERS.register("sapling_recipe", () -> SERIALIZER);
 
     public static RecipeType<CustomSaplingRecipe> SAPLING_RECIPE;
 

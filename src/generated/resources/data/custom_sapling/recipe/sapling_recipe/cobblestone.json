@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "type": "custom_sapling:sapling_recipe",
   "key": {
     "A": {
       "tag": "minecraft:saplings"
@@ -15,7 +14,13 @@
     "BBB"
   ],
   "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "CustomSaplingId": "custom_sapling:cobblestone"
+      }
+    },
     "count": 1,
     "id": "custom_sapling:custom_sapling"
-  }
+  },
+  "sapling_id": "custom_sapling:cobblestone"
 }

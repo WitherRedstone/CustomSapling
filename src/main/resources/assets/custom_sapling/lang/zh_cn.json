@@ -2,5 +2,6 @@
   "itemGroup.custom_sapling_tab": "自定义树苗",
 
   "block.custom_sapling.custom_sapling": "自定义树苗",
-  "block.custom_sapling.cobblestone": "圆石树苗"
+  "block.custom_sapling.cobblestone": "圆石树苗",
+  "block.custom_sapling.obsidian": "黑曜石树苗"
 }
