@@ -5,5 +5,8 @@
   "block.custom_sapling.cobblestone": "Cobblestone Sapling",
   "block.custom_sapling.obsidian": "Obsidian Sapling",
   "block.custom_sapling.iron_ore": "Iron Ore Sapling",
-  "block.custom_sapling.coal_ore": "Coal Ore Sapling"
+  "block.custom_sapling.coal_ore": "Coal Ore Sapling",
+
+  "tooltip.custom_sapling.plant_on": "Plantable on [%s]",
+  "tooltip.custom_sapling.plant_on_more": "Plantable on [%s, etc.]"
 }

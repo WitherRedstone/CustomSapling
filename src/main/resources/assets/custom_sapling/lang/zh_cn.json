@@ -5,5 +5,8 @@
   "block.custom_sapling.cobblestone": "圆石树苗",
   "block.custom_sapling.obsidian": "黑曜石树苗",
   "block.custom_sapling.iron_ore": "铁矿石树苗",
-  "block.custom_sapling.coal_ore": "煤矿石树苗"
+  "block.custom_sapling.coal_ore": "煤矿石树苗",
+
+  "tooltip.custom_sapling.plant_on": "种植的方块[%s]",
+  "tooltip.custom_sapling.plant_on_more": "种植的方块[%s等]"
 }
